@@ -33,4 +33,239 @@
 
         /* Barra de Navegación */
         nav {
-            display: fle
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: rgba(11, 15, 25, 0.9);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-brand {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #60a5fa;
+            letter-spacing: 1px;
+        }
+
+        /* Sección Hero (Encabezado de Landing Page) */
+        .hero {
+            background: linear-gradient(135deg, #1e1b4b, #0f172a);
+            border-bottom: 2px solid var(--accent-color);
+            padding: 80px 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            line-height: 1.6;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.1);
+            color: #60a5fa;
+            border: 1px solid var(--accent-color);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Contenedor Principal en Grid */
+        main {
+            max-width: 1200px;
+            width: 100%;
+            margin: 60px auto;
+            padding: 0 20px;
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        /* Tarjetas de Secciones */
+        .dashboard-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px var(--accent-glow);
+            border-color: var(--accent-color);
+        }
+
+        .dashboard-card h2 {
+            color: #60a5fa;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dashboard-card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Botones de Acción */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #2563eb;
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        /* Contenedores multimedia específicos */
+        .media-box {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #000;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+        }
+
+        img, iframe, video {
+            width: 100%;
+            display: block;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #030712;
+            border-top: 1px solid var(--border-color);
+            padding: 30px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-muted);
+        }
+
+        .logo-colegio {
+            height: 40px;
+            width: auto;
+            filter: brightness(0.9);
+            transition: transform 0.3s;
+        }
+
+        .logo-colegio:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            footer { flex-direction: column; gap: 15px; text-align: center; }
+            nav { padding: 15px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <nav>
+        <span class="nav-brand">IRTRA Petapa | TICs</span>
+        <span style="color: var(--text-muted); font-size: 0.9rem;">Colegio Capouilliez</span>
+    </nav>
+
+    <!-- Sección Hero (Encabezado de Landing Page) -->
+    <header class="hero">
+        <span class="hero-badge">🚀 Proyecto de Automatización y TICs</span>
+        <h1>Centro de Mando & Automatización</h1>
+        <p>Sistema Electrónico Autónomo aplicado al IRTRA Petapa. Solución integral de ingeniería desarrollada para optimizar procesos operativos mediante tecnología de vanguardia.</p>
+        <a href="#contenido" class="btn">Explorar Componentes</a>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main id="contenido">
+        <!-- SECCIÓN 1: CIRCUITO TINKERCAD -->
+        <div class="dashboard-card">
+            <div>
+                <h2>⚙️ 1. Simulación en Tinkercad</h2>
+                <p>Implementación del circuito autónomo con microcontrolador Arduino Uno y más de 4 componentes en C++ nativo (Funcional al 100%).</p>
+            </div>
+            <a href="https://www.tinkercad.com" target="_blank" class="btn">Abrir Simulación Tinkercad</a>
+        </div>
+
+        <!-- SECCIÓN 2: INVESTIGACIÓN FORMAL (GITHUB) -->
+        <div class="dashboard-card">
+            <div>
+                <h2>📚 2. Investigación Formal</h2>
+                <p>Documento técnico con hojas colchón, orientación mixta, estructurado bajo múltiples temas principales y referencias APA nativas.</p>
+            </div>
+            <a href="https://github.com" target="_blank" class="btn">Ver Repositorio en GitHub</a>
+        </div>
+
+        <!-- SECCIÓN 3: INFOGRAFÍA EJECUTIVA -->
+        <div class="dashboard-card">
+            <div>
+                <h2>📊 3. Infografía del Proyecto</h2>
+                <p>Infografía gerencial que detalla el nombre de la solución, avatares del equipo creados por inteligencia artificial y la justificación del ODS.</p>
+            </div>
+            <div class="media-box">
+                <img src="Recursos/infografia.png" alt="Infografía del Proyecto IRTRA">
+            </div>
+            <a href="Recursos/infografia.pdf" target="_blank" class="btn">Ver Infografía Completa (PDF)</a>
+        </div>
+
+        <!-- SECCIÓN 4: PODCAST INFORMATIVO -->
+        <div class="dashboard-card">
+            <div>
+                <h2>🎙️ 4. Podcast Explicativo</h2>
+                <p>Audio o video explicativo sobre la lógica del proyecto y su impacto operativo directo en las instalaciones del IRTRA Petapa.</p>
+            </div>
+            <div class="media-box">
+                <video controls>
+                    <source src="Recursos/podcast_irtra.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video.
+                </video>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" alt="Logo Colegio Capouilliez" class="logo-colegio">
+        <span>Proyecto TICs | Bachillerato | Colegio Capouilliez</span>
+    </footer>
+
+</body>
+</html>
