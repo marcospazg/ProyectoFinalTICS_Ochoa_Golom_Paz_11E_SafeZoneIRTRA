@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro de Mando SafeZone IRTRA</title>
-    <!-- Google Fonts para un estilo moderno -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -22,7 +21,6 @@
             flex-direction: column;
         }
 
-        /* Header estilo barra superior */
         header {
             display: flex;
             justify-content: space-between;
@@ -44,7 +42,6 @@
             color: #9ca3af;
         }
 
-        /* Hero Section Reducido */
         .hero {
             text-align: center;
             padding: 35px 20px 40px 20px;
@@ -80,7 +77,6 @@
             line-height: 1.5;
         }
 
-        /* Contenedor con Flexbox para distribución perfecta en 3 y 2 */
         .container {
             max-width: 1160px;
             margin: 40px auto;
@@ -97,7 +93,7 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 14px;
             padding: 24px;
-            width: calc(33.333% - 16px); /* Exactamente 3 por fila considerando el gap */
+            width: calc(33.333% - 16px); 
             min-width: 300px;
             max-width: 360px;
             display: flex;
@@ -174,7 +170,6 @@
             border-color: #2563eb;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 25px;
@@ -187,81 +182,76 @@
 </head>
 <body>
 
-    <!-- Header -->
+
     <header>
         <div class="header-left">IRTRA Petapa | TICs</div>
         <div class="header-right">Colegio Capouilliez</div>
     </header>
 
-    <!-- Sección Hero Reducida -->
+    
     <section class="hero">
         <div class="badge">🚀 Proyecto de Automatización y TICs</div>
         <h1>Centro de Mando SafeZone IRTRA</h1>
         <p>Sistema Electrónico Autónomo aplicado al IRTRA Petapa. Solución integral de ingeniería desarrollada para optimizar procesos operativos mediante tecnología de vanguardia.</p>
     </section>
+    
 
-    <!-- Contenedor con los 5 Apartados (Distribuidos simétricamente en 3 y 2) -->
     <div class="container">
+
         
-        <!-- Apartado 1 -->
         <div class="card">
             <div>
                 <div class="card-img-container">
                     <img src="TinkercadPreview" alt="Simulación de Tinkercad">                
                 </div>
                 <h3>⚙️ 1. Simulación de Tinkercad</h3>
-                <p>Implementación del circuito autónomo, pruebas de lógica y conexiones virtuales diseñadas para el funcionamiento operativo del proyecto.</p>
+                <p>Implementación del circuito y pruebas virtuales diseñadas para determinar el funcionamiento del proyecto.</p>
             </div>
             <a href="https://www.tinkercad.com/things/iucwRoORLLF-proyecto-final-4u-ochoagolompaz/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard" target="_blank" class="card-btn">Ver Simulación</a>
         </div>
 
-        <!-- Apartado 2 -->
         <div class="card">
             <div>
                 <h3>📁 2. Investigación Formal</h3>
-                <p>Documento técnico detallado que incluye la fundamentación teórica, estructuración bajo normas y el marco de desarrollo del proyecto.</p>
+                <p>Documento técnico detallado que incluye la fundamentación, estructuración y el marco de desarrollo del proyecto.</p>
             </div>
             <embed src="Proyecto Final Robotica IRTRA - Documento Formal Limpio (1).pdf" type="application/pdf" width="100%" height="400px" style="max-width: 100%;"/>
         </div>
 
-        <!-- Apartado 3 -->
         <div class="card">
             <div>
                 <h3>📊 3. Infografía del Proyecto</h3>
-                <p>Resumen visual estructurado con los puntos clave, diagramas de flujo y arquitectura general de SafeZone IRTRA.</p>
+                <p>Resumen visual con los puntos clave y arquitectura general de SafeZone IRTRA.</p>
             </div>
             <embed src="InfografiaProyecto4u.pdf" type="application/pdf" width="100%" height="400px" style="max-width: 100%;"/>
         </div>
 
-        <!-- Apartado 4 -->
         <div class="card">
             <div>
                 <div class="card-img-container">
                     <span class="card-img-placeholder">Imagen de Podcast</span>
                 </div>
                 <h3>🎙️ 4. Podcast Explicativo</h3>
-                <p>Exposición en formato de audio/video donde se detallan los objetivos, retos superados y demostración de los resultados obtenidos.</p>
+                <p>Podcast explicativo donde se detallan los objetivos, retos superados y demostración de los resultados obtenidos.</p>
             </div>
             <a href="https://www.youtube.com" target="_blank" class="card-btn">Escuchar / Ver Podcast</a>
         </div>
 
-        <!-- Apartado 5 -->
         <div class="card">
             <div>
                 <div class="card-img-container">
                     <img src="GithubPreview" alt="Recursos">                
                 </div>
                 <h3>📦 5. Recursos</h3>
-                <p>Repositorio con archivos adicionales, códigos fuente, librerías y herramientas de apoyo utilizadas durante la ejecución del proyecto.</p>
+                <p>Repositorio con archivos adicionales, códigos, librerías y herramientas de apoyo utilizadas durante la ejecución del proyecto.</p>
             </div>
             <a href="https://github.com/marcospazg/ProyectoFinalTlCS_Ochoa_Golom_Paz_11E_SafeZoneIRTRA" target="_blank" class="card-btn">Ver Recursos</a>
         </div>
 
     </div>
-
-    <!-- Footer -->
+    
     <footer>
-        <p>&copy; 2026 SafeZone IRTRA - Todos los derechos reservados.</p>
+        <p>&copy; 2026 SafeZone IRTRA - Autores: Julian Ochoa, Jose Golom, Marcos Paz.</p>
     </footer>
 
 </body>
