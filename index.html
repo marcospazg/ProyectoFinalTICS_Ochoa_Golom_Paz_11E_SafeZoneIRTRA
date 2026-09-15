@@ -80,62 +80,16 @@
             line-height: 1.5;
         }
 
-        /* Contenedor de Apartados (Diseño estricto de 3 columnas: 3 arriba, 2 abajo) */
+        /* Contenedor con Flexbox para distribución perfecta en 3 y 2 */
         .container {
-            max-width: 1100px;
+            max-width: 1160px;
             margin: 40px auto;
             padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 24px;
             flex-grow: 1;
-        }
-
-        /* Centrar los dos elementos de la última fila (4 y 5) */
-        .card:nth-child(4) {
-            grid-column: 1 / 2;
-            /* Si prefieres que las dos de abajo queden centradas en la segunda fila, descomenta la siguiente línea o ajusta según prefieras: */
-            /* grid-column: 1.5 / 2.5; */
-        }
-        
-        /* Truco elegante para centrar las últimas 2 tarjetas en un grid de 3 columnas si son 5 elementos en total */
-        .card:nth-child(4) {
-            grid-column: 1 / span 1;
-            margin-left: 50%;
-        }
-        .card:nth-child(5) {
-            grid-column: span 1 / -1;
-            margin-right: 50%;
-        }
-
-        @media (min-width: 769px) {
-            .card:nth-child(4) {
-                grid-column: 1 / 2;
-                margin-left: 50%;
-            }
-            .card:nth-child(5) {
-                grid-column: 2 / 3;
-                margin-right: 0;
-                margin-left: 0;
-            }
-        }
-
-        /* Ajuste responsivo para tablets y móviles */
-        @media (max-width: 900px) {
-            .container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .card:nth-child(4), .card:nth-child(5) {
-                grid-column: auto;
-                margin-left: 0;
-                margin-right: 0;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
         }
 
         .card {
@@ -143,6 +97,9 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 14px;
             padding: 24px;
+            width: calc(33.333% - 16px); /* Exactamente 3 por fila considerando el gap */
+            min-width: 300px;
+            max-width: 360px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -243,7 +200,7 @@
         <p>Sistema Electrónico Autónomo aplicado al IRTRA Petapa. Solución integral de ingeniería desarrollada para optimizar procesos operativos mediante tecnología de vanguardia.</p>
     </section>
 
-    <!-- Contenedor con los 5 Apartados (Distribuidos en 3 y 2) -->
+    <!-- Contenedor con los 5 Apartados (Distribuidos simétricamente en 3 y 2) -->
     <div class="container">
         
         <!-- Apartado 1 -->
@@ -294,7 +251,7 @@
             <a href="https://www.youtube.com" target="_blank" class="card-btn">Escuchar / Ver Podcast</a>
         </div>
 
-        <!-- Apartado 5 (Nuevo) -->
+        <!-- Apartado 5 -->
         <div class="card">
             <div>
                 <div class="card-img-container">
@@ -303,7 +260,7 @@
                 <h3>📦 5. Recursos</h3>
                 <p>Repositorio con archivos adicionales, códigos fuente, librerías y herramientas de apoyo utilizadas durante la ejecución del proyecto.</p>
             </div>
-            <a href="https://github.com/marcospazg/ProyectoFinalTlCS_Ochoa_Golom_Paz_11E_SafeZoneIRTRA" target="_blank" class="card-btn">Ver Recursos</a>
+            <a href="#" target="_blank" class="card-btn">Ver Recursos</a>
         </div>
 
     </div>
